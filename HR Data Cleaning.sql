@@ -37,5 +37,20 @@ SET termdate =  date(str_to_date(termdate , '%Y-%m-%d %H:%i:%s UTC '))
 WHERE termdate IS NOT NULL AND termdate != '';
 ALTER TABLE hr
 MODIFY COLUMN termdate DATE;
+
 #END UPDATE TERMADTE
-SELECT hr.termdate FROM hr;
+
+#ADD NEW COLUMN AGE
+
+ALTER TABLE hr
+ADD COLUMN age INT;
+UPDATE hr
+SET age = timestampdiff(YEAR , birthdate, CURDATE());
+SELECT MIN(age) AS youngest , MAX(age) AS oldest
+FROM hr;
+SELECT count(*) FROM hr
+WHERE age < 18;
+SELECT age FROM hr;
+
+
+#END NEW COLUMN AGE
