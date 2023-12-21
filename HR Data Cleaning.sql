@@ -30,4 +30,12 @@ END;
 
 ALTER TABLE hr
 MODIFY COLUMN hire_date DATE;
+
+# START UPDATE TERMDATE
+UPDATE hr
+SET termdate =  date(str_to_date(termdate , '%Y-%m-%d %H:%i:%s UTC '))
+WHERE termdate IS NOT NULL AND termdate != '';
+ALTER TABLE hr
+MODIFY COLUMN termdate DATE;
+#END UPDATE TERMADTE
 SELECT hr.termdate FROM hr;
