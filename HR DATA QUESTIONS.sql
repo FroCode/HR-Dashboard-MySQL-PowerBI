@@ -1,19 +1,15 @@
 -- QUESTIONS
-USE project;
+USE project  ;
+
 -- 1. What is the gender breakdown of employees in the company?
 
-    SELECT gender, COUNT(*) AS count
-FROM hr
-WHERE age >= 18 AND termdate = '0000-00-00'
-GROUP BY gender;
+    SELECT gender , count(*) AS count
+    FROM  hr
+    WHERE age >= 18 AND termdate = '0000-00-00'
+    GROUP BY gender
 
 -- 2. What is the race/ethnicity breakdown of employees in the company?
 
-    SELECT race , count(*) AS count
-    FROM hr
-    WHERE age >= 18 AND termdate = '0000-00-00'
-    GROUP BY race
-    ORDER BY count(*) DESC;
 -- 3. What is the age distribution of employees in the company?
 
 
