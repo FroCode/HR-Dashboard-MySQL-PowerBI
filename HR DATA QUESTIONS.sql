@@ -95,6 +95,17 @@ GROUP BY gender
 
 -- 8. Which department has the highest turnover rate?
 
+    SELECT department ,
+           total_count,
+           termdated_count,
+           termdated_count / total_count AS terminate_rate
+    FROM (
+        SELECT hr.department , COUNT(*) AS total_count , SUM(CASE WHEN hr.termdate <> '0000-00-00' AND hr.termdate <= curdate()THEN 1 ELSE 0 END) AS termdated_count
+        FROM  hr
+        WHERE age >= 18
+        GROUP BY department
+         ) AS subquery
+    ORDER BY terminate_rate DESC;
 
 -- 9. What is the distribution of employees across locations by city and state?
 
