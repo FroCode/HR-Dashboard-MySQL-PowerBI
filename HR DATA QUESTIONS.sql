@@ -62,6 +62,7 @@ GROUP BY gender
 
 -- 4. How many employees work at headquarters versus remote locations?
 
+    #START
 
 -- 5. What is the average length of employment for employees who have been terminated?
 
