@@ -86,6 +86,12 @@ GROUP BY gender
 
 -- 7. What is the distribution of job titles across the company?
 
+    SELECT hr.jobtitle , COUNT(*) AS count
+    FROM hr
+    WHERE age >= 18  and termdate <> '0000-00-00'
+    GROUP BY jobtitle
+    ORDER BY count DESC ;
+
 
 -- 8. Which department has the highest turnover rate?
 
