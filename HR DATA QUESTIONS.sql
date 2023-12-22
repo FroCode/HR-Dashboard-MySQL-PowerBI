@@ -116,4 +116,22 @@ GROUP BY gender
 
 -- 10. How has the company's employee count changed over time based on hire and term dates?
 
+ SELECT
+    year,
+    hires,
+    terminations,
+    hires - terminations AS net_change,
+    ROUND((hires - terminations) / hires * 100, 2) AS net_change_percent
+FROM (
+    SELECT
+        YEAR(hire_date) AS year,
+        COUNT(*) AS hires,
+        SUM(CASE WHEN termdate <> '0000-00-00' AND termdate <= CURDATE() THEN 1 ELSE 0 END) AS terminations
+    FROM hr
+    WHERE age >= 18
+    GROUP BY YEAR(hire_date)
+) AS subquery
+ORDER BY year ASC;
+
+
 -- 11. What is the tenure distribution for each department?
