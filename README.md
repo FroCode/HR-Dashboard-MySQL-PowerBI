@@ -43,6 +43,6 @@
 - Some termdates were far into the future and were not included in the analysis(1599 records). The only term dates used were those less than or equal to the current date.
 
 ## To Check The Report You Can Download : 
-- The Power Bi Fille ([HR Empolyee Report.pbix](https://github.com/FroCode/HR-Dashboard-MySQL-PowerBI/blob/main/HR%20Empolyee%20Report.pbix))
+- The Power Bi Fille ([HR Empolyee Report.pbix](https://github.com/FroCode/HR-Dashboard-MySQL-PowerBI/blob/main/HR%20Empolyee%20Report.pbix)
 - Pdf Fille ([HR Empolyee Report.pdf](https://github.com/FroCode/HR-Dashboard-MySQL-PowerBI/blob/main/HR%20Empolyee%20Report.pdf))
 ## Thank You 
