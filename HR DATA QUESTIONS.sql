@@ -71,6 +71,11 @@ GROUP BY gender
 
 -- 5. What is the average length of employment for employees who have been terminated?
 
+        SELECT round(avg(datediff(termdate , hire_date)) / 365,0) AS avg_length_emp
+        FROM hr
+        WHERE termdate <= curdate() AND termdate <> '0000-00-00' AND age >= 18;
+
+
 -- 6. How does the gender distribution vary across departments and job titles?
 
 
