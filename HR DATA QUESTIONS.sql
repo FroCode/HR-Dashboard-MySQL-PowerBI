@@ -108,7 +108,11 @@ GROUP BY gender
     ORDER BY terminate_rate DESC;
 
 -- 9. What is the distribution of employees across locations by city and state?
-
+    SELECT location_state ,  COUNT(*) AS count
+    FROM hr
+    WHERE age >= 18 AND termdate <> '0000-00-00'
+    GROUP BY location_state
+    ORDER BY count DESC;
 
 -- 10. How has the company's employee count changed over time based on hire and term dates?
 
