@@ -1,9 +1,10 @@
+CREATE DATABASE project;
 USE project;
 
 SELECT * FROM hr;
 
 ALTER TABLE hr
-CHANGE COLUMN id emp_id VARCHAR(20) NULL;
+CHANGE COLUMN ï»¿id emp_id VARCHAR(20) NULL;
 
 DESCRIBE hr;
 
@@ -31,26 +32,29 @@ END;
 ALTER TABLE hr
 MODIFY COLUMN hire_date DATE;
 
-# START UPDATE TERMDATE
 UPDATE hr
-SET termdate =  date(str_to_date(termdate , '%Y-%m-%d %H:%i:%s UTC '))
-WHERE termdate IS NOT NULL AND termdate != '';
+SET termdate = date(str_to_date(termdate, '%Y-%m-%d %H:%i:%s UTC'))
+WHERE termdate IS NOT NULL AND termdate != ' ';
+
 ALTER TABLE hr
 MODIFY COLUMN termdate DATE;
 
-#END UPDATE TERMADTE
+ALTER TABLE hr ADD COLUMN age INT;
 
-#ADD NEW COLUMN AGE
-
-ALTER TABLE hr
-ADD COLUMN age INT;
 UPDATE hr
-SET age = timestampdiff(YEAR , birthdate, CURDATE());
-SELECT MIN(age) AS youngest , MAX(age) AS oldest
+SET age = timestampdiff(YEAR, birthdate, CURDATE());
+
+SELECT 
+	min(age) AS youngest,
+    max(age) AS oldest
 FROM hr;
-SELECT count(*) FROM hr
-WHERE age < 18;
-SELECT age FROM hr;
 
+SELECT count(*) FROM hr WHERE age < 18;
 
-#END NEW COLUMN AGE
+SELECT COUNT(*) FROM hr WHERE termdate > CURDATE();
+
+SELECT COUNT(*)
+FROM hr
+WHERE termdate = '0000-00-00';
+
+SELECT location FROM hr;
