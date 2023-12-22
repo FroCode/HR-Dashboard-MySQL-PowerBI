@@ -64,6 +64,11 @@ GROUP BY gender
 
     #START
 
+    SELECT location , count(*) AS count
+    FROM hr
+    WHERE age >= 18 AND termdate = '0000-00-00'
+    GROUP BY location;
+
 -- 5. What is the average length of employment for employees who have been terminated?
 
 -- 6. How does the gender distribution vary across departments and job titles?
