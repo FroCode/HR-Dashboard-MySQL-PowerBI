@@ -78,6 +78,11 @@ GROUP BY gender
 
 -- 6. How does the gender distribution vary across departments and job titles?
 
+    SELECT department,  gender , COUNT(*) AS count
+    FROM hr
+    WHERE AGE >= 18 and termdate <> '0000-00-00'
+    GROUP BY department, gender;
+
 
 -- 7. What is the distribution of job titles across the company?
 
