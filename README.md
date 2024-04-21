@@ -1,8 +1,8 @@
 # HR-Dashboard-MySQL-PowerBI
 
 
-<img src="./im1 (1).png" alt="Example Image" width="800" height="400">
-<img src="./im1 (2).png" alt="Example Image" width="800" height="400">
+<img src="./im1 (1).png" alt="Example Image" width="700" height="400">
+<img src="./im1 (2).png" alt="Example Image" width="700" height="400">
 
 ## Data Used
 
