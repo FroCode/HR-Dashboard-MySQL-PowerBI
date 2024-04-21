@@ -1,14 +1,14 @@
 # HR-Dashboard-MySQL-PowerBI
 
 
-<img src="./im1 (1).png" alt="Example Image" width="700" height="400">
-<img src="./im1 (2).png" alt="Example Image" width="700" height="400">
+<img src="./im1 (1).png" alt="1" width="700" height="400">
+<img src="./im1 (2).png" alt="2" width="700" height="400">
 
 ## Data Used
 
 **Data** - HR Data with over 22000 rows from the year 2000 to 2020.
 
-**Data Cleaning & Analysis** - MySQL Workbench - SQL Queries - DataGrip
+**Data Cleaning & Analysis** - MySQL Workbench - SQL Queries - DataGrip - Power Query 
 
 **Data Visualization** - PowerBI
 
